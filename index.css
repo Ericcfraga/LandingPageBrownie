@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  background-color: #efebe6;
+  color: #4a3418;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 200px;
+}
+
+.img-logo {
+  height: 80px;
+}
+
+.ul-nav {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.btn-carrinho {
+  background-color: #4a3418;
+  border-radius: 16px;
+  padding: 9px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-carrinho > i {
+  background-color: #4a3418;
+}
+
+.btn-carrinho > span {
+  background: transparent;
+  color: beige;
+}
