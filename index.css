@@ -4,10 +4,12 @@
   padding: 0;
   outline: 0;
   border: 0;
-  background-color: #efebe6;
   color: #4a3418;
   text-decoration: none;
-  font-family: "Inter", sans-serif;
+}
+
+main  {
+    background-color: #fff9f0;
 }
 
 header {
@@ -18,8 +20,10 @@ header {
   position: sticky;
   top: 0;
   z-index: 99;
-  background-color: #efebe6fd;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+  background-color: #f3f0edef;
+  border: 1px solid #4a341823;
+  backdrop-filter: blur(40px);
+  box-shadow: 0 1px 3px 0 #0000001a;
 }
 
 .img-logo {
@@ -31,6 +35,7 @@ header {
   list-style: none;
   gap: 2rem;
   transition-duration: 0.5s;
+  font-family: "Inter", sans-serif;
 }
 
 .ul-nav a:hover {
@@ -45,7 +50,6 @@ header {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-
 }
 
 .btn-carrinho > i {
@@ -79,7 +83,7 @@ header {
   background-image: url("assets/brownie-banner.png");
   background-size: cover;
   background-position: center;
-  min-height: 83vh;
+  min-height: 82vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -87,6 +91,7 @@ header {
   padding-top: 140px;
   gap: 30px;
   position: relative;
+  font-family: "Inter", sans-serif;
 }
 
 .div-banner {
@@ -145,4 +150,21 @@ header {
   max-width: 500px;
   border-radius: 16px;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.sobre-nos-texto {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  font-weight: 270;
+  font-family: "Inter", sans-serif;
+}
+
+.titulo-sobre-nos {
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 1.2;
+  font-family: "Playfair display", serif;
 }
