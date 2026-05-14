@@ -170,7 +170,7 @@ header {
   font-family: "Playfair display", serif;
 }
 
-.linha-sobre-nos {
+.linha-sobre-nos, .linha-avaliacoes{
   background-image: linear-gradient(to right, #d4af37, #4a3428);
   height: 4px;
   width: 100px;
@@ -235,9 +235,10 @@ header {
   transition-duration: 0.5s;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.207);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   justify-content: space-between;
   padding-bottom: 18px;
+  position: relative;
 }
 
 .div-card-produto img {
@@ -249,6 +250,33 @@ header {
   object-fit: cover;
   transition: transform 0.4s;
   margin-bottom: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.div-img-yellow {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 180px;
+  width: 100%;
+  background: linear-gradient(to top, #d4af3754, #d4af3700);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s cubic-bezier(0.4,0,1,1), height 0.4s;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.div-img-yellow:hover {
+  background-color: linear-gradient(to top, #d4af3741, #d4af3700);
+}
+
+.div-card-produto:hover .div-img-yellow {
+  opacity: 1;
+  height: 190px;
+  transition: opacity 0.7s cubic-bezier(0,0,0.2,1), height 0.4s;
 }
 
 .div-card-produto button {
@@ -271,8 +299,8 @@ header {
 }
 
 .div-card-produto:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.207);
 }
 
 .div-card-produto:hover img {
@@ -294,4 +322,44 @@ h3 {
   font-size: 30px;
   font-weight: 200;
   line-height: 1.2;
+}
+
+.clientes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding: 64px 100px;
+}
+
+.titulo-avaliacoes {
+  font-size: 48px;
+  font-weight: 200;
+  line-height: 1.2;
+  font-family: "Playfair display", serif;
+}
+
+.descricao-avaliacoes {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  width: 73ch;
+  font-weight: 270;
+}
+
+.div-depoimentos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.copyrights{
+  text-align: center;
+  font-size: 16px;
+  color: #4a3418;
 }
