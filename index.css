@@ -26,6 +26,14 @@ header {
   box-shadow: 0 1px 3px 0 #0000001a;
 }
 
+header h1{
+  display: none;
+}
+
+.nav-header i {
+  display: none;
+}
+
 .img-logo {
   height: 80px;
 }
@@ -142,6 +150,7 @@ header {
 .section-sobrenos {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap-reverse;
   padding: 64px 100px;
   gap: 100px 64px;
   line-height: 1.5;
@@ -211,7 +220,7 @@ header {
 
 .div-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
   width: 100%;
   max-width: 1300px;
@@ -350,7 +359,7 @@ h3 {
 }
 
 .div-depoimentos {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
   width: 100%;
   max-width: 1100px;
@@ -413,4 +422,151 @@ h3 {
   text-align: center;
   font-size: 16px;
   color: #4a3418;
+}
+
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 4px;
+    gap: 6px;
+    background-color: #f3f0edef;
+  }
+
+  header h1 {
+    display: inline;
+    font-size: 24px;
+    font-family: "Comfortaa", sans-serif;
+  }
+
+  header img {
+    display: none;
+  }
+
+  .img-logo {
+    height: 48px;
+  }
+
+  .nav-header {
+    order: -1;
+  }
+
+  .nav-header i {
+  display: flex;
+}
+
+  .ul-nav {
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+    align-items: flex-start;
+    display: none;
+  }
+
+    .ul-nav a {
+    font-size: 0.95rem;
+    padding: 4px 0;
+  }
+
+  .btn-carrinho {
+    font-size: 0.9rem;
+    padding: 6px 10px;
+    min-width: unset;
+    width: auto;
+    border-radius: 12px;
+    gap: 0.3rem;
+  }
+
+    .btn-carrinho > span {
+    font-size: 0.9rem;
+  }
+
+  .fa-solid.fa-cart-shopping {
+    font-size: 1rem;
+  }
+
+  .section-banner {
+    padding-top: 80px;
+    min-height: 60vh;
+    gap: 16px;
+  }
+
+  .section-banner h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .section-banner h2 {
+    font-size: 1.1rem;
+  }
+
+  .section-banner a {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+
+  .section-sobrenos {
+    flex-direction: column;
+    padding: 32px 8px;
+    gap: 32px 0;
+  }
+
+  .section-sobrenos img {
+    max-width: 100%;
+  }
+
+  .produtos {
+    padding: 32px 8px;
+    gap: 10px;
+  }
+
+  .titulo-produtos {
+    font-size: 28px;
+  }
+
+  .descricao-produtos {
+    width: 100%;
+    font-size: 13px;
+  }
+
+  .div-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .div-card-produto {
+    max-width: 100%;
+    min-height: 200px;
+    padding-bottom: 10px;
+  }
+
+  .div-card-produto img {
+    height: 120px;
+  }
+
+  .clientes {
+    padding: 32px 8px;
+  }
+
+  .titulo-avaliacoes {
+    font-size: 24px;
+  }
+
+  .descricao-avaliacoes {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  .div-depoimentos {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 100%;
+  }
+
+  .card-depoimento {
+    padding: 16px 8px;
+    min-height: 180px;
+    max-width: 100%;
+  }
 }
