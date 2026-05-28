@@ -29,8 +29,8 @@
       src="https://tan-snort-70284350.figma.site/_assets/v11/daa5d3c42890427918d72c8e15e7328475a7be6e.png"
       alt="Brownie">
     <nav class="nav-header">
-      <i class="fa-solid fa-bars" style="color: rgb(19, 0, 72);"></i>
-      <ul class="ul-nav">
+      <i id="btn" class="fa-solid fa-bars" style="color: rgb(19, 0, 72);"></i>
+      <ul id="menu" class="ul-nav">
         <li><a href="#Sobre-nos">Sobre</a></li>
         <li><a href="#Produtos">Produtos</a></li>
         <li><a href="#Avaliacoes">Avaliações</a></li>
@@ -191,6 +191,15 @@
   <footer>
     <p class="copyrights">&copy; 2026: Página de Brownie. Todos os direitos reservados. Feito com 🤎 e chocolate.</p>
   </footer>
+  <script>
+    const btn = document.getElementById("btn");
+    const menu = document.getElementById("menu");
+    console.log(btn);
+    
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  </script>
 </body>
 
 </html>

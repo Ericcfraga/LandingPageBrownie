@@ -426,11 +426,11 @@ h3 {
 
 @media (max-width: 1024px) {
   header {
-    flex-direction: column;
     align-items: center;
     padding: 8px 4px;
     gap: 6px;
     background-color: #f3f0edef;
+    position: relative;
   }
 
   header h1 {
@@ -456,14 +456,23 @@ h3 {
 }
 
   .ul-nav {
-    flex-direction: column;
     gap: 0.3rem;
+    display: flex;
     width: 100%;
     align-items: flex-start;
     display: none;
   }
 
-    .ul-nav a {
+.ul-nav.active {
+    display: flex;
+    position: absolute;
+    background-color: #f3f0edef;
+    top: 72px;
+    left: 0;
+    width: 100%;
+  }
+
+  .ul-nav a {
     font-size: 0.95rem;
     padding: 4px 0;
   }
